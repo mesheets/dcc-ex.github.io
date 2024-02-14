@@ -132,8 +132,8 @@ JMRI Web Server Based Throttles
 
 ----
 
-Table - Command Suites and Throttles Crossreference 
-===================================================
+Table - Command Suites and Throttles Cross Reference 
+====================================================
 
 .. table::
     :width: 100%
@@ -141,13 +141,13 @@ Table - Command Suites and Throttles Crossreference
     :align: center
     :class: command-table
 
-  ========= ============ =============== =========== ========== ========== ========= ===== ========= ========= ======= =======
-    Train                        Technology Stack                                           Form Factor
-  --------- --------------------------------------------------- --------------------------------------------------------------
-   Project   Connection   Communication     User       Also       Device        Mobile Handhelds        Personal Computer
-  --------- ------------ --------------- ----------- ---------- ---------- ------------------------- -------------------------
-    Name        Type        Protocol      Interface   Requires   Physical   Android   iOS   Windows   Windows   MacOS   Linux
-  ========= ============ =============== =========== ========== ========== ========= ===== ========= ========= ======= =======
+    ========= ============ =============== =========== ========== ========== ========= ===== ========= ========= ======= =======
+      Train                        Technology Stack                                           Form Factor
+    --------- --------------------------------------------------- --------------------------------------------------------------
+     Project   Connection   Communication     User       Also       Device        Mobile Handhelds        Personal Computer
+    --------- ------------ --------------- ----------- ---------- ---------- ------------------------- -------------------------
+      Name        Type        Protocol      Interface   Requires   Physical   Android   iOS   Windows   Windows   MacOS   Linux
+    ========= ============ =============== =========== ========== ========== ========= ===== ========= ========= ======= =======
 
 
 .. csv-table::
@@ -157,24 +157,24 @@ Table - Command Suites and Throttles Crossreference
     :align: center
     :class: command-table
 
-  JMRI,Network,Native,Command Suite,,,✔ (Web),✔ (Web),✔ (Web),✔ (App),✔ (App),✔ (App)
-  Railroad Auto-mation,Network or LocoNet,LocoNet,Command Suite,IoTT Red Hat,,✔ (Web),✔ (Web),✔ (Web),✔ (App),✔ (App),✔ (App)
-  EX-Web Throttle,USB/Serial,Native,Web,,,,,,✔,✔,✔
-  Engine Driver,Network,Native,App,,,✔,,,,,
-  DCCpp CAB,Network,Native,App,,,✔,,,,,
-  Cab Engineer: DCC Throttle,Network,WiThrottle,App,,,✔,,,,,
-  RtDtive DCC++,Network,Native,App,,,✔,,,,,
-  DigiTrains Pro,Network,JMRI Web,App,JMRI,,✔,✔,,✔,,
-  Locontrol,Network,JMRI Web,App,JMRI,,,✔,,,,
-  WiThrottle,Network,WiThrottle,App,,,,✔,,,,
-  SRCP Client,Network,Native,App,,,,✔,,,,
-  Train Driver,Network,Native,App,,,,✔,,,,
-  Train Throttle,Network,WiThrottle,App,,,,,✔,✔,,
-  mini Throttle,Network or Serial,Native,Device,,✔,,,,,,
-  WiT controller,Network,WiThrottle,Device,,✔,,,,,,
-  TCS UWT Throttles,Network,WiThrottle,Device,,✔,,,,,,
-  Elgato Stream Deck,Network,Native,Device,PC or Raspberry Pi,✔,,,,,,
-  LocoNet-Compatible Throttles,LocoNet,LocoNet,Device,IoTT Red Hat,✔,,,,,,
+    JMRI,Network,Native,Command Suite,,,✔ (Web),✔ (Web),✔ (Web),✔ (App),✔ (App),✔ (App)
+    Railroad Auto-mation,Network or LocoNet,LocoNet,Command Suite,IoTT Red Hat,,✔ (Web),✔ (Web),✔ (Web),✔ (App),✔ (App),✔ (App)
+    EX-Web Throttle,USB/Serial,Native,Web,,,,,,✔,✔,✔
+    Engine Driver,Network,Native,App,,,✔,,,,,
+    DCCpp CAB,Network,Native,App,,,✔,,,,,
+    Cab Engineer: DCC Throttle,Network,WiThrottle,App,,,✔,,,,,
+    RtDtive DCC++,Network,Native,App,,,✔,,,,,
+    DigiTrains Pro,Network,JMRI Web,App,JMRI,,✔,✔,,✔,,
+    Locontrol,Network,JMRI Web,App,JMRI,,,✔,,,,
+    WiThrottle,Network,WiThrottle,App,,,,✔,,,,
+    SRCP Client,Network,Native,App,,,,✔,,,,
+    Train Driver,Network,Native,App,,,,✔,,,,
+    Train Throttle,Network,WiThrottle,App,,,,,✔,✔,,
+    mini Throttle,Network or Serial,Native,Device,,✔,,,,,,
+    WiT controller,Network,WiThrottle,Device,,✔,,,,,,
+    TCS UWT Throttles,Network,WiThrottle,Device,,✔,,,,,,
+    Elgato Stream Deck,Network,Native,Device,PC or Raspberry Pi,✔,,,,,,
+    LocoNet-Compatible Throttles,LocoNet,LocoNet,Device,IoTT Red Hat,✔,,,,,,
 
 
 .. csv-table:: Legend
@@ -184,12 +184,12 @@ Table - Command Suites and Throttles Crossreference
     :delim: =
     :class: command-table
 
-  Net = Wifi or LAN networks
-  Free / paid = Both Free and Paid versions are available.  The free version might be limited in features.
-  Native = Uses the Native DCC-EX command / command protocols
-  WiT = Uses the WiThrottle command protocol
-  Web = Requires the use of a web browser
-  Win = Windows 7 and above
+    Net = Wifi or LAN networks
+    Free / paid = Both Free and Paid versions are available.  The free version might be limited in features.
+    Native = Uses the Native DCC-EX command / command protocols
+    WiT = Uses the WiThrottle command protocol
+    Web = Requires the use of a web browser
+    Win = Windows 7 and above
 
 Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
 
