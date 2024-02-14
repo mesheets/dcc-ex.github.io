@@ -181,7 +181,7 @@ Table - Command Suites and Throttles Cross Reference
     :widths: auto
     :stub-columns: 1
     :align: left
-    :delim: "="
+    :delim: =
     :class: command-table
 
     Net = Wifi or LAN networks
