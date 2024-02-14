@@ -135,19 +135,23 @@ JMRI Web Server Based Throttles
 Table - Command Suites and Throttles Cross Reference 
 ====================================================
 
+.. raw:: html
+
+    <div>
+
 .. table::
     :width: 100%
     :widths: 10 8 8 10 8 8 8 8 8 8 8 8
     :align: center
     :class: command-table
 
-    ========= ============ =============== =========== ========== ========== ========= ===== ========= ========= ======= =======
+    ========= ============ ========== =========== ========== ========== ========= ===== ========= ========= ======= =======
       Train                        Technology Stack                                           Form Factor
-    --------- --------------------------------------------------- --------------------------------------------------------------
-     Project   Connection   Communication     User       Also       Device        Mobile Handhelds        Personal Computer
-    --------- ------------ --------------- ----------- ---------- ---------- ------------------------- -------------------------
-      Name        Type        Protocol      Interface   Requires   Physical   Android   iOS   Windows   Windows   MacOS   Linux
-    ========= ============ =============== =========== ========== ========== ========= ===== ========= ========= ======= =======
+    --------- ---------------------------------------------- --------------------------------------------------------------
+     Project   Connection   Message      User       Also       Device        Mobile Handhelds        Personal Computer
+    --------- ------------ ---------- ----------- ---------- ---------- ------------------------- -------------------------
+      Name        Type      Protocol   Interface   Requires   Physical   Android   iOS   Windows   Windows   MacOS   Linux
+    ========= ============ ========== =========== ========== ========== ========= ===== ========= ========= ======= =======
 
 
 .. csv-table::
@@ -176,6 +180,9 @@ Table - Command Suites and Throttles Cross Reference
     Elgato Stream Deck,Network,Native,Device,PC or Raspberry Pi,✔,,,,,,
     LocoNet-Compatible Throttles,LocoNet,LocoNet,Device,IoTT Red Hat,✔,,,,,,
 
+.. raw:: html
+
+    </div>
 
 .. csv-table:: Legend
     :widths: auto
