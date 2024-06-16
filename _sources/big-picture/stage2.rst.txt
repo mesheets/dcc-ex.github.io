@@ -7,7 +7,7 @@
 Stage 2 - Adding a Roster
 *********************************
 
-|conductor|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 
@@ -50,16 +50,16 @@ Add a line that looks like:
 
 Where:
 
-* 999 - is the DCC address of your loco
-* My Loco Name - is anything you want to see as the name of this loco in the throttle apps
-* F0 F1 F3 ... F27. - are the names that you want to see for the functions specific to this loco
-* \*F2 - note that if the function is 'momentary' rather than 'latching' (On/Off) then start the function label with a asterisk (\*).  The most common example of this is the Horn/Whistle which is commonly on F2.
+* **999** - is the DCC address of your loco
+* **Loco Name** - is anything you want to see as the name of this loco in the throttle apps
+* **F0 F1 F3 ... F27**. - are the names that you want to see for the functions specific to this loco
+* **\*F2** - note that if the function is 'momentary' rather than 'latching' (On/Off) then start the function label with a asterisk (\*).  The most common example of this is the Horn/Whistle which is commonly on F2.
 
 Some more realistic examples might look like:
 
 .. code-block:: 
    
-   ROSTER (  3,"Eng 3", "F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address 3, Eng 3, Function keys F0-F10
+   ROSTER(3,"Eng 3","F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address = 3, Loco Name = Eng 3, Function keys F0-F10
    ROSTER(1224,"PE 1224","") // Motor Only Decoder, But use Engine Driver 'Preferences >In Phone Loco 'Sound'
    ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute")
    ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
@@ -112,11 +112,27 @@ Re-upload the EX-CommandStation software
 Using EX-Installer
 ^^^^^^^^^^^^^^^^^^
 
-#. Place your 'myAutomation.h' file in the ``CommandStation-EX`` subfolder of wherever you extracted the |EX-I| files.
-#. Re-Run |EX-I|
-#. Select the same options that you originally chose and upload
+The |EX-I| can make use of the config files from a 'saved' location.  
 
-The Roster will be automatically loaded with the |EX-CS| software.
+*If you have previously saved the config files...*
+
+   At the end of the install process it will ask you if you want to save the config files. If you have said ``Yes`` (and put them in a folder well away from the EX-Installer folder) you can place your 'myAutomation.h' in that folder and rerun the |EX-I|. the |EX-I| will ask if you want to use existing config files. Just point it to where you saved and edited the file.
+
+   The Roster will be automatically loaded with the |EX-CS| software.
+
+*If you have not saved the config files...*
+
+   Re-run the |EX-I|. Select the same options that you originally chose *and* also select the ``create myAutomation.h`` and the ``Advanced config`` options.  This will show a myAutomation.h window on the following page. Copy and paste your roster lines into this window then ``Compile and load`` the software.
+
+   After the load finishes you will be asked to 'backup/save' the config files. Say `Yes` and put them in a folder well away from the EX-Installer folder. You can can then make direct edits to the file there, and when you next run |EX-I|, it asks if you want to use existing config files. Just point it to where you saved and edited the file.
+
+   The Roster will be automatically loaded with the |EX-CS| software.
+
+More information on the config files can be found on the :doc:`/ex-installer/managing-config-files` page.
+
+.. warning:: 
+
+   Never edit any files in the EX-Installer folder. Editing any files in the EX-Installer folder will **always** cause |EX-I| to fail.
 
 Using the Arduino IDE
 ^^^^^^^^^^^^^^^^^^^^^
@@ -186,4 +202,4 @@ There are three ways to load & store your Locomotive Icon Image in Engine Driver
 * If you later add an image in the JMRI Roster for the loco (or later connect to a |WiThrottle server| that has an image), it will automatically overwrite the local image with the one on the server.
 * In the Recent Locos list you *can not* add images to locos entered by a DCC address. (i.e. not from the roster)  
 
-Also refer to the `Engine Driver Loco Icon Documentation <https://flash62au.github.io/EngineDriver_Home/configuration/loco_icons.html?highlight=images>`_ for more information.
+Also refer to the `Engine Driver Loco Icon Documentation <https://flash62au.github.io/EngineDriver_Home/configuration/loco_icons.html?highlight=images>`_ |EXTERNAL-LINK| for more information.

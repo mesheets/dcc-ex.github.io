@@ -7,7 +7,7 @@
 Testing, Tuning, and Control
 *****************************
 
-|tinkerer| |githublink-ex-turntable-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-turntable-button2|
 
 .. sidebar:: 
 
@@ -101,14 +101,14 @@ Note that as per the existing commands, the above table for the various activiti
 
 For further information on using this new functionality, some examples are included at the bottom of this page in the section :ref:`ex-turntable/test-and-tune:new - development version control of ex-turntable`.
 
-Serial console testing
-----------------------
+Interactive Serial console commands
+-----------------------------------
 
 As of version 0.5.0-Beta, the ability to test |EX-TT| directly via the serial console has been introduced.
 
-Similar to the |EX-CS| diagnostic command outlined previously, the syntax is ``<steps activity>``, where again steps is the number of steps from the home position to move to, and activity is as per the previous table. Note that also like the diagnostic command, this needs to be a number.
+Similar to the |EX-CS| diagnostic command outlined previously and up until version 0.7.0, the syntax is ``<steps activity>``, where again steps is the number of steps from the home position to move to, and activity is as per the previous table. Note that also like the diagnostic command, this needs to be a number. In version 0.7.0, this changes to ``<M steps activity>``.
 
-For example, sending the command ``<300 0>`` via the serial console will result in output similar to this:
+For example, sending the command ``<300 0>``/``<M 300 0>`` via the serial console will result in output similar to this:
 
 .. code-block:: 
 
@@ -117,6 +117,17 @@ For example, sending the command ``<300 0>`` via the serial console will result 
   Received notification to move to step postion 300
   Position steps: 300, Auto phase switch - moving 300 steps
   Setting phase switch flag to: 0
+
+In version 0.7.0, a number of other interactive serial console commands have also been added. This is the complete list:
+
+- ``<C>`` - Initiate the calibration sequence
+- ``<D>`` - Enable/disable debug output to the serial console
+- ``<E>`` - Erase the EEPROM contents, which will force calibration to occur at next startup
+- ``<H>`` - Initiate homing
+- ``<M steps activity>`` - Initiate a move to the provided step count with the specified activity
+- ``<R>`` - Initiate a reboot (note with the old bootloader Nano this will not function correctly)
+- ``<T>`` - Enter/exit sensor testing mode, and requires a restart if exiting
+- ``<V>`` - Display the startup information in the serial console
 
 Testing EX-Turntable
 ====================
@@ -183,7 +194,7 @@ Finally, this command will cause the turntable to once again find its home posit
   
   <D TT 600 0 2>
 
-.. todo:: `LOW - Add a video demonstrating diagnostic commands <https://github.com/DCC-EX/dcc-ex.github.io/issues/439>`_
+.. todo:: `LOW - Add a video demonstrating diagnostic commands <https://github.com/DCC-EX/dcc-ex.github.io/issues/439>`_ |EXTERNAL-LINK|
 
 Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout in preparation for defining the EX-RAIL configuration and putting |EX-TT| to good use.
 
@@ -375,7 +386,7 @@ In a similar manner to |EX-TT| itself, the rotary encoder Arduino connects to th
 
   The rotary encoder software is not official DCC-EX software and is maintained separately. The device driver and EX-RAIL commands are included with |EX-CS| as of version 5.0.0.
 
-  This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__.
+  This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__ |EXTERNAL-LINK|.
 
 Required software
 -----------------
@@ -384,7 +395,7 @@ The rotary encoder software can be downloaded from:
 
 .. rst-class:: dcclink
 
-  `dcc-ex-rotary-encoder GitHub repository <https://github.com/peteGSX-Projects/dcc-ex-rotary-encoder>`_
+  `dcc-ex-rotary-encoder GitHub repository <https://github.com/peteGSX-Projects/dcc-ex-rotary-encoder>`_ |EXTERNAL-LINK|
 
 To utilise this rotary encoder, you must be running version 5.0.0 or later of |EX-CS|.
 
@@ -393,7 +404,7 @@ Enabling the device driver
 
 The default |I2C| address for the rotary encoder is 0x78, and you will need to create the device in "myAutomation.h" on your |EX-CS|.
 
-Note you can create the device using 1, 2, or 3 Vpins. If you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. If you define 3 Vpins, you can tell the rotary encoder when a turntable has changed position also. Refer to the `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__ documentation for more information on this feature.
+Note you can create the device using 1, 2, or 3 Vpins. If you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. If you define 3 Vpins, you can tell the rotary encoder when a turntable has changed position also. Refer to the `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__ |EXTERNAL-LINK| documentation for more information on this feature.
 
 .. code-block::
 
